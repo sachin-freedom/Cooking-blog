@@ -1,0 +1,20 @@
+<h1 class="mb-4">Explore Latest</h1>
+
+
+
+<div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+    <% if(typeof recipes !== 'undefined' && recipes.length > 0) {%> <% recipes.forEach(function(recipe, index) { %>
+    <a href="/recipe/<%= recipe.id %>" class="col tex-center category__link">
+      <div class="category__img category__img--large shadow">
+        <img
+          src="/uploads/<%= recipe.image %>"
+          alt="<%= recipe.name %>"
+          loading="lazy"
+        />
+      </div>
+      <div class="pt-1"><%= recipe.name %></div>
+    </a>
+    <% }) %> <% } else {%>
+      <h6> Not found any recipe in this category </h6>
+      <% } %>
+  </div>
