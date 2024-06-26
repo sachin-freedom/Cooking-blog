@@ -334,7 +334,7 @@ exports.getContact = (req,res) =>{
 
 
 exports.getAbout = (req,res) =>{
-  res.render("about-US.ejs");
+  res.render("about-us.ejs");
 }
 
 
